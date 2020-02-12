@@ -17,7 +17,13 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "d3-service": [
+        "dist/d3-service/d3-service",
+        "dist/d3-service"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
