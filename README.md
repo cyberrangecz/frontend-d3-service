@@ -1,27 +1,31 @@
-# CsirtMuD3Service
+# Csirt Mu D3 Service
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.1.
+This library serves as a wrapper for D3 and D3 types imports for better developer experience in Angular environment. You can inject the service into any component or service.
 
-## Development server
+## Prerequisites
+ 
+To use the library you need to have installed:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+* NPM with private [KYPO Nexus repository](https://projects.ics.muni.cz/projects/kbase/knowledgebase/articles/153)
+* Angular 9
 
-## Code scaffolding
+## Usage
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Install the library with `npm install csirt-mu-d3-service`
 
-## Build
+Import the service and other D3 types you wish to use like this
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+`import {D3, D3Service, ScaleBand, ScaleLinear} from 'csirt-mu-d3-service';`
 
-## Running unit tests
+Define your attribute like this
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+`private readonly d3: D3;`
 
-## Running end-to-end tests
+Add dependency injection into constructor of your component or service like this
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+```
+  constructor(d3Service: D3Service) {
+    this.d3 = d3Service.getD3();
+  }
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+```
