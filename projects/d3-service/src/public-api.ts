@@ -222,5 +222,5 @@ export {
   ZoomBehavior,
   ZoomedElementBaseType,
   ZoomScale,
-  ZoomTransform
+  ZoomTransform,
 } from 'd3';
