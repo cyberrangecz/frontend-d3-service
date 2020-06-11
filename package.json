@@ -10,8 +10,7 @@
     "e2e": "ng e2e",
     "build-library": "ng build d3-service --prod",
     "create-package": "cd dist/d3-service && npm pack",
-    "build-and-pack": "npm install && npm run build-library && npm run create-package",
-    "publish": "npm run build-and-pack && cd dist/d3-service && npm publish --registry=http://kypo-storage.ics.muni.cz:8081/repository/npm-hosted"
+    "build-and-pack": "npm install && npm run build-library && npm run create-package"
   },
   "private": true,
   "dependencies": {
