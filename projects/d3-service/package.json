@@ -2,10 +2,12 @@
   "name": "csirt-mu-d3-service",
   "version": "9.0.0",
   "peerDependencies": {
-    "@angular/common": "^9.0.0",
-    "@angular/core": "^9.0.0",
-    "tslib": "^1.10.0",
+    "@angular/common": "^10.0.0",
+    "@angular/core": "^10.0.0",
     "@types/d3": "^5.7.2",
     "d3": "^5.15.0"
+  },
+  "dependencies": {
+    "tslib": "^2.0.0"
   }
 }
