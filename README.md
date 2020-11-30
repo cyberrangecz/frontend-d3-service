@@ -1,4 +1,4 @@
-# Csirt Mu D3 Service
+# KYPO D3 Service
 
 This library serves as a wrapper for D3 and D3 types imports for better developer experience in Angular environment. You can inject the service into any component or service.
 
@@ -6,16 +6,15 @@ This library serves as a wrapper for D3 and D3 types imports for better develope
  
 To use the library you need to have installed:
 
-* NPM with private [KYPO Nexus repository](https://projects.ics.muni.cz/projects/kbase/knowledgebase/articles/153)
-* Angular 9
+* NPM with access to [KYPO registry](https://projects.ics.muni.cz/projects/kbase/knowledgebase/articles/153)
 
 ## Usage
 
-Install the library with `npm install csirt-mu-d3-service`
+Install the library with `npm install @kypo/d3-service`
 
 Import the service and other D3 types you wish to use like this
 
-`import {D3, D3Service, ScaleBand, ScaleLinear} from 'csirt-mu-d3-service';`
+`import {D3, D3Service, ScaleBand, ScaleLinear} from '@kypo/d3-service';`
 
 Define your attribute like this
 
