@@ -6,14 +6,20 @@
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
-    "lint": "ng lint",
+    "lint": "ng lint && npm run prettier-check",
     "e2e": "ng e2e",
+    "prettier-check": "prettier --check \"projects/**/*.ts\"",
     "build-library": "ng build d3-service --prod",
     "create-package": "cd dist/d3-service && npm pack",
     "build-and-pack": "npm install && npm run build-library && npm run create-package",
     "ci-update-version": "cd ./projects/d3-service/ && npm version $VERSION",
     "ci-build-and-pack": "npm ci --cache .npm --prefer-offline && npm run build-library && npm run create-package",
     "ci-publish-package": "cd dist/d3-service && npm publish"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run prettier-check"
+    }
   },
   "private": true,
   "dependencies": {
@@ -36,11 +42,18 @@
     "@angular/cli": "~10.0.0",
     "@angular/compiler-cli": "~10.0.1",
     "@angular/language-service": "~10.0.1",
+    "@angular-eslint/builder": "^0.8.0-beta.0",
+    "@angular-eslint/eslint-plugin": "^0.8.0-beta.0",
+    "@angular-eslint/eslint-plugin-template": "^0.8.0-beta.0",
+    "@angular-eslint/schematics": "^0.8.0-beta.0",
+    "@angular-eslint/template-parser": "^0.8.0-beta.0",
+    "@typescript-eslint/parser": "^4.3.0",
+    "@typescript-eslint/eslint-plugin": "^4.7.0",
+    "eslint": "^7.13.0",
     "@types/node": "^12.11.1",
     "@types/jasmine": "~3.5.0",
     "@types/jasminewd2": "~2.0.3",
     "@types/d3": "^5.7.2",
-    "codelyzer": "^5.1.2",
     "jasmine-core": "~3.5.0",
     "jasmine-spec-reporter": "~5.0.0",
     "karma": "~5.0.0",
@@ -49,13 +62,10 @@
     "karma-jasmine": "~3.3.0",
     "karma-jasmine-html-reporter": "^1.5.0",
     "ng-packagr": "^10.0.0",
-    "tslint-config-prettier": "1.18.0",
-    "tslint-plugin-prettier": "2.3.0",
     "husky": "^4.2.5",
     "prettier": "2.0.4",
     "protractor": "~7.0.0",
     "ts-node": "~8.3.0",
-    "tslint": "~6.1.0",
     "typescript": "~3.9.5"
   }
 }
