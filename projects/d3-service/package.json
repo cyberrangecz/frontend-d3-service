@@ -1,5 +1,5 @@
 {
-  "name": "@kypo/d3-service",
+  "name": "@muni-kypo-crp/d3-service",
   "version": "10.1.0",
   "peerDependencies": {
     "@angular/common": "^10.0.0",

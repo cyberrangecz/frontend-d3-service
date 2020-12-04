@@ -1,5 +1,5 @@
 {
-  "name": "@kypo/d3-service",
+  "name": "@muni-kypo-crp/d3-service",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
