@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "d3-service": {
@@ -30,18 +30,16 @@
           }
         },
         "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
+          "builder": "@angular-eslint/builder:lint",
           "options": {
-            "tsConfig": [
-              "projects/d3-service/tsconfig.lib.json",
-              "projects/d3-service/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
+            "lintFilePatterns": [
+              "projects/d3-service/**/*.ts",
+              "projects/d3-service/**/*.component.html"
             ]
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "d3-service"
 }
