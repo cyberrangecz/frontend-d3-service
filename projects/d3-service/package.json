@@ -2,8 +2,8 @@
   "name": "@muni-kypo-crp/d3-service",
   "version": "11.0.0",
   "peerDependencies": {
-    "@angular/common": "^10.0.0",
-    "@angular/core": "^10.0.0",
+    "@angular/common": "~11.0.8",
+    "@angular/core": "~11.0.8",
     "@types/d3": "^5.7.2",
     "d3": "^5.15.0"
   },
