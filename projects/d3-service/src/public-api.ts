@@ -4,14 +4,23 @@
 export * from './lib/d3-service';
 export {
   // d3-array
+  Adder,
   Bin,
   Bisector,
+  HistogramCommon,
+  HistogramGeneratorDate,
+  HistogramGeneratorNumber,
+  InternMap,
+  InternSet,
   Numeric,
   Primitive,
   ThresholdCountGenerator,
+  ThresholdDateArrayGenerator,
+  ThresholdNumberArrayGenerator,
   // d3-axis
   Axis,
   AxisContainerElement,
+  AxisDomain,
   AxisScale,
   AxisTimeInterval,
   // d3-brush
@@ -27,19 +36,14 @@ export {
   Ribbon,
   RibbonGenerator,
   RibbonSubgroup,
-  // d3-collection
-  Map,
-  Nest,
-  NestedArray,
-  NestedMap,
-  NestedObject,
-  Set,
-  Stringifiable,
+  RibbonArrowGenerator,
   // d3-color
   Color,
   ColorCommonInstance,
   ColorFactory,
   ColorSpaceObject,
+  GrayColorFactory,
+  LCHColorFactory,
   CubehelixColor,
   CubehelixColorFactory,
   HCLColor,
@@ -54,6 +58,9 @@ export {
   ContourDensity,
   ContourMultiPolygon,
   Contours,
+  // d3-delaunay
+  Delaunay,
+  Voronoi,
   // d3-dispatch
   Dispatch,
   // d3-drag
@@ -64,18 +71,24 @@ export {
   SubjectPosition,
   // d3-dsv
   DSV,
+  DSVRaw,
   DSVParsedArray,
+  DSVRowAny,
   DSVRowString,
+  DSVRowArray,
   // d3-ease
   BackEasingFactory,
   ElasticEasingFactory,
   PolynomialEasingFactory,
+  // d3-fetch
+  // No interfaces or types
   // d3-force
   Force,
   ForceCenter,
   ForceCollide,
   ForceLink,
   ForceManyBody,
+  ForceRadial,
   ForceX,
   ForceY,
   Simulation,
@@ -85,6 +98,7 @@ export {
   FormatLocaleDefinition,
   FormatLocaleObject,
   FormatSpecifier,
+  FormatSpecifierObject,
   // d3-geo
   ExtendedFeature,
   ExtendedFeatureCollection,
@@ -103,6 +117,7 @@ export {
   GeoStream,
   GeoStreamWrapper,
   GeoTransformPrototype,
+  GeoIdentityTransform,
   // d3-hierarchy
   ClusterLayout,
   HierarchyCircularLink,
@@ -115,6 +130,7 @@ export {
   HierarchyRectangularNode,
   PackCircle,
   PackLayout,
+  PackRadius,
   PartitionLayout,
   RatioSquarifyTilingFactory,
   StratifyOperator,
@@ -124,6 +140,9 @@ export {
   ColorGammaInterpolationFactory,
   ZoomInterpolator,
   ZoomView,
+  TypedArray,
+  NumberArray,
+  ArrayInterpolator,
   // d3-path
   Path,
   // d3-polygon
@@ -140,6 +159,17 @@ export {
   RandomNormal,
   RandomNumberGenerationSource,
   RandomUniform,
+  RandomInt,
+  RandomPareto,
+  RandomBernoulli,
+  RandomGeometric,
+  RandomBinomial,
+  RandomGamma,
+  RandomBeta,
+  RandomWeibull,
+  RandomCauchy,
+  RandomLogistic,
+  RandomPoisson,
   // d3-scale
   InterpolatorFactory,
   ScaleContinuousNumeric,
@@ -153,13 +183,20 @@ export {
   ScaleQuantile,
   ScaleQuantize,
   ScaleSequential,
+  ScaleSequentialBase,
+  ScaleSequentialQuantile,
   ScaleThreshold,
   ScaleTime,
+  NumberValue,
+  UnknownReturnType,
+  ScaleSymLog,
+  ScaleRadial,
+  ScaleDiverging,
   // d3-scale-chromatic
   // No interfaces or types
   // d3-selection
   ArrayLike,
-  BaseEvent,
+  KeyType,
   BaseType,
   ClientPointEvent,
   ContainerElement,
@@ -196,6 +233,10 @@ export {
   Stack,
   Symbol,
   SymbolType,
+  CanvasPath_D3Shape,
+  RadialLine,
+  RadialArea,
+  RadialLink,
   // d3-time
   CountableTimeInterval,
   TimeInterval,
@@ -206,17 +247,7 @@ export {
   Timer,
   // d3-transition
   Transition,
-  // d3-voronoi
-  VoronoiCell,
-  VoronoiDiagram,
-  VoronoiEdge,
-  VoronoiLayout,
-  VoronoiLink,
-  VoronoiPoint,
-  VoronoiPointPair,
-  VoronoiPolygon,
-  VoronoiSite,
-  VoronoiTriangle,
+  SelectionOrTransition,
   // d3-zoom
   D3ZoomEvent,
   ZoomBehavior,
