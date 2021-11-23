@@ -60,7 +60,6 @@ export {
   Contours,
   // d3-delaunay
   Delaunay,
-  Voronoi,
   // d3-dispatch
   Dispatch,
   // d3-drag
