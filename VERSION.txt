@@ -1,2 +1,3 @@
+13.0.0 Update to Angular 13 and CI update
 12.0.2 Update to d3 v7
 12.0.1 Update gitlab CI
