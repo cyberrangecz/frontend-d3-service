@@ -81,6 +81,7 @@ deploy:
       - .npm/
     policy: pull
   script:
+    - npm install -g npm
     - cp $NPMRC_PULL ~/.npmrc
     - npm run ci-build-and-pack
     - cp $NPMRC_PUSH ~/.npmrc
