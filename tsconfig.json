@@ -1,33 +1,33 @@
 {
-  "compileOnSave": false,
-  "compilerOptions": {
-    "baseUrl": "./",
-    "outDir": "./dist/out-tsc",
-    "sourceMap": true,
-    "declaration": false,
-    "downlevelIteration": true,
-    "experimentalDecorators": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "importHelpers": true,
-    "target": "ES2022",
-    "typeRoots": [
-      "node_modules/@types"
-    ],
-    "lib": [
-      "es2018",
-      "dom"
-    ],
-    "paths": {
-      "d3-service": [
-        "dist/d3-service/d3-service",
-        "dist/d3-service"
-      ]
+    "compileOnSave": false,
+    "compilerOptions": {
+        "baseUrl": "./",
+        "outDir": "./dist/out-tsc",
+        "sourceMap": true,
+        "declaration": false,
+        "downlevelIteration": true,
+        "experimentalDecorators": true,
+        "module": "esnext",
+        "moduleResolution": "node",
+        "importHelpers": true,
+        "target": "ES2022",
+        "typeRoots": [
+            "node_modules/@types"
+        ],
+        "lib": [
+            "es2018",
+            "dom"
+        ],
+        "paths": {
+            "d3-service": [
+                "dist/d3-service/d3-service",
+                "dist/d3-service"
+            ]
+        },
+        "useDefineForClassFields": false
     },
-    "useDefineForClassFields": false
-  },
-  "angularCompilerOptions": {
-    "fullTemplateTypeCheck": true,
-    "strictInjectionParameters": true
-  }
+    "angularCompilerOptions": {
+        "fullTemplateTypeCheck": true,
+        "strictInjectionParameters": true
+    }
 }
