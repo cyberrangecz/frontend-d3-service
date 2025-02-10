@@ -1,12 +1,6 @@
-# KYPO D3 Service
+# CyberRangeᶜᶻ Platform D3 Service
 
 This library serves as a wrapper for D3 and D3 types imports for better developer experience in Angular environment. You can inject the service into any component or service.
-
-## Prerequisites
-
-To use the library you need to have installed:
-
-* NPM with access to [KYPO registry](https://projects.ics.muni.cz/projects/kbase/knowledgebase/articles/153)
 
 ## Usage
 
