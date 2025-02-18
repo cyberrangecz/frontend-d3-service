@@ -4,11 +4,11 @@ This library serves as a wrapper for D3 and D3 types imports for better develope
 
 ## Usage
 
-Install the library with `npm install @cyberrangecz-platform/d3-service`
+Install the library with `npm install @crczp/d3-service`
 
 Import the service and other D3 types you wish to use like this
 
-`import {D3, D3Service, ScaleBand, ScaleLinear} from '@cyberrangecz-platform/d3-service';`
+`import {D3, D3Service, ScaleBand, ScaleLinear} from '@crczp/d3-service';`
 
 Define your attribute like this
 
