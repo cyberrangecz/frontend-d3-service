@@ -55,7 +55,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20.17.0'
-          scope: crczp
+          registry-url: 'https://registry.npmjs.org'
           cache: 'npm'
 
       - name: Install dependencies
@@ -72,11 +72,14 @@ jobs:
           retention-days: 1
 
   publish_to_npmjs:
-    if: github.ref == 'refs/heads/master' && github.event.inputs.confirm_action == 'yes'
+    if: github.ref == 'refs/heads/develop' && github.event.inputs.confirm_action == 'yes'
     runs-on: ubuntu-24.04
     needs: [build, control_tag]
     container:
       image: ${{ vars.container_image }}
+    permissions:
+      contents: read
+      id-token: write
     steps:
       - uses: actions/checkout@v4
 
@@ -84,7 +87,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20.17.0'
-          scope: crczp
+          registry-url: 'https://registry.npmjs.org'
           cache: 'npm'
 
       - name: Download built package
@@ -96,11 +99,11 @@ jobs:
       - name: Publish Package
         run: npm run ci-publish-package
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPMJS_TOKEN }}
 
   # Controls if version consistent with semver and higner than last git tag.
   control_tag:
-    if: github.event.pull_request.base.ref == 'master' || github.ref == 'refs/heads/master'
+    if: github.event.pull_request.base.ref == 'develop' || github.ref == 'refs/heads/develop'
     needs: get_current_version
     uses: cyberrangecz/actions-templates/.github/workflows/tag_control_template.yml@master
     with:

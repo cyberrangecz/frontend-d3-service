@@ -10,9 +10,6 @@
     "dependencies": {
         "tslib": "^2.7.0"
     },
-    "publishConfig": {
-        "registry": "https://npm.pkg.github.com"
-    },
     "repository": {
         "type": "git",
         "url": "https://github.com/cyberrangecz/frontend-d3-service.git"
