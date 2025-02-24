@@ -10,10 +10,10 @@ export type D3 = typeof d3;
  * D3 service.
  */
 @Injectable({
-  providedIn: 'root',
+    providedIn: 'root',
 })
 export class D3Service {
-  getD3(): D3 {
-    return d3;
-  }
+    getD3(): D3 {
+        return d3;
+    }
 }
