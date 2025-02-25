@@ -21,5 +21,6 @@ jobs:
     uses: cyberrangecz/actions-templates/.github/workflows/frontend_template.yml@master
     secrets:
       NPMJS_TOKEN: ${{ secrets.NPMJS_TOKEN }}
+      SENTINEL_PULL: ${{ secrets.SENTINEL_PULL }}
     with:
       VERSION_PATH: "projects/d3-service/package.json"
