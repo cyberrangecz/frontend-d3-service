@@ -8,7 +8,6 @@
         "build": "ng build",
         "test": "ng test",
         "lint": "ng lint && npm run prettier-check",
-        "e2e": "ng e2e",
         "prettier-check": "prettier --check \"projects/**/*.ts\"",
         "prettier-fix": "prettier --write \"./projects/**/*.ts\"",
         "build-library": "ng build d3-service --configuration production",
